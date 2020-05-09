@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Write(View v) {
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(context.openFileOutput("testi.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter writer = new OutputStreamWriter(context.openFileOutput(WriteFileName.getText().toString(), Context.MODE_PRIVATE));
             //String s = "";
             writer.write(WriteText.getText().toString());
             writer.close();
